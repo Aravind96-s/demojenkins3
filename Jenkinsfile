@@ -16,8 +16,8 @@ pipeline {
         }
 
         stage('Test') {
-            steps {
-                bat 'curl http://localhost:5000'
+           steps {
+              bat 'powershell -Command "Invoke-WebRequest http://localhost:5000 -UseBasicParsing"'
             }
         }
     }
