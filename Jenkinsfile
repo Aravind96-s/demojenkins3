@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
+
         stage('Install Dependencies') {
             steps {
-                bat 'python -m pip install -r requirements.txt'
+                bat '"C:\\Program Files (x86)\\Python39\\python.exe" -m pip install -r requirements.txt'
             }
         }
 
@@ -16,7 +17,7 @@ pipeline {
 
         stage('Run App') {
             steps {
-                bat 'start /B python app.py'
+                bat 'start /B "" "C:\\Users\\Aravind\\AppData\\Local\\Programs\\Python\\Python39\\python.exe" app.py'
             }
         }
 
