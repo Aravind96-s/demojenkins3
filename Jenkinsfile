@@ -17,7 +17,7 @@ pipeline {
 
         stage('Test') {
            steps {
-              bat 'powershell -Command "Invoke-WebRequest http://localhost:5000 -UseBasicParsing"'
+              bat '"C:\\Program Files (x86)\\Python39\\python.exe" -c "import urllib.request; print(urllib.request.urlopen(\'http://localhost:5000\').read())"'
             }
         }
     }
