@@ -11,13 +11,13 @@ pipeline {
 
         stage('Kill Old App') {
             steps {
-                bat 'taskkill /F /IM python.exe || echo No process running'
+                bat 'C:\\Windows\\System32\\taskkill.exe /F /IM python.exe || echo No process running'
             }
         }
 
         stage('Run App') {
             steps {
-                bat 'start /B "" "C:\\Users\\Aravind\\AppData\\Local\\Programs\\Python\\Python39\\python.exe" app.py'
+                bat 'start /B "" "C:\\Program Files (x86)\\Python39\\python.exe" app.py'
             }
         }
 
