@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/Aravind96-s/demojenkins3.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 bat 'python -m pip install -r requirements.txt'
